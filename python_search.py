@@ -8,6 +8,7 @@ Note: you need to enter your user name and password into the code, not at runtim
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
+import getpass
 from selenium.common.exceptions import NoSuchElementException
 
 title = "Omnibellum wants YOU!"
@@ -90,8 +91,8 @@ def SafeToPost():
 			return True
 		return True
 	
-username = "username"
-password = "password"
+username = raw_input("Username: ")
+password = getpass.getpass('Password: ')
 
 driver = webdriver.Firefox()
 driver.get("http://forum.supercell.net/forumdisplay.php/56-I-Need-A-Clan!")
