@@ -16,6 +16,10 @@ title = raw_input("Title: ")
 message_path = raw_input("Path to message text: ")
 with open(message_path) as f:
 	message = f.readlines()
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6971fef2ffc9916aa649fd3b6989784b19500dd6
 
 def writemsg():
        	driver.find_element_by_id("newreplylink_top").click()
