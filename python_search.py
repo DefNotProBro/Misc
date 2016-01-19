@@ -5,6 +5,7 @@ This program loads the "I need a clan" section of the Clash of Clans' forum. It 
 
 '''
 from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.keys import Keys
 import time
 import getpass
@@ -16,10 +17,6 @@ title = raw_input("Title: ")
 message_path = raw_input("Path to message text: ")
 with open(message_path) as f:
 	message = f.readlines()
-<<<<<<< HEAD
-=======
-
->>>>>>> 6971fef2ffc9916aa649fd3b6989784b19500dd6
 
 def writemsg():
        	driver.find_element_by_id("newreplylink_top").click()
@@ -72,6 +69,8 @@ while True:
 				elem.send_keys(Keys.CONTROL + Keys.RETURN)
 				driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.TAB)
 				driver.switch_to_window(main_window)
+				time.sleep(randint(5,10)
+				driver.find_element_by_tag_name('body')).send_keys(Keys.ESCAPE)
 				writemsg()	
 			else:
 				print "Element not found and the exception did not get thrown. Please email the developer with the error in the body of your message"
